@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BASE_URL } from '../app.constants';
+import { API_BASE_URL } from '../app.constants';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class StoryService {
-  /** Will contain list of story ID's */
+  /** Array of numbers that will contain story ID's */
   stories: Array<number>;
 
   constructor(private http: HttpClient) { }
@@ -20,7 +20,7 @@ export class StoryService {
    */
   getStoriesByType(storyType: string) {
     return new Promise((resolve, reject) => {
-      this.http.get(`${BASE_URL}${storyType}stories.json`).subscribe((stories: Array<number>) => {
+      this.http.get(`${API_BASE_URL}${storyType}stories.json`).subscribe((stories: Array<number>) => {
         this.stories = stories;
         resolve(stories);
       }, () => { reject(); });
@@ -32,7 +32,7 @@ export class StoryService {
    *
    * @param storyId story id
    */
-  fetchStory(storyId: number) {
-    return this.http.get(`${BASE_URL}item/${storyId}.json`);
+  getStory(storyId: number) {
+    return this.http.get(`${API_BASE_URL}item/${storyId}.json`);
   }
 }

@@ -5,22 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoryListComponent } from './story-list/story-list.component';
+
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
     StoryListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
