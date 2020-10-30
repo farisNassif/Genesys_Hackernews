@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StoryModel } from '../shared/story-model';
+import { StoryService } from '../shared/story.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  stories: Array<StoryModel> = [];
+
+  constructor(private postService: StoryService) {
+    this.postService.getAllStories().subscribe(story => {
+      this.stories = story;
+    });
+  }
 
   ngOnInit(): void {
+    
   }
 
 }
