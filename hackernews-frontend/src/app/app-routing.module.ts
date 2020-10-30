@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { StoryListComponent } from './story-list/story-list.component';
 
+/* Available routes */
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  /* Path that handles the best/top/new endpoints */
+  { path: 'stories/:type', component: StoryListComponent },
+  /* Default route */
+  { path: '', pathMatch: 'full', redirectTo: 'stories/top' }
 ];
 
 @NgModule({
