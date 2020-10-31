@@ -35,7 +35,6 @@ export class StoryListComponent implements OnInit {
     });
   }
 
-
   loadStories() {
     const storiesList = [];
     this.moreStories = this.nextStoryIndex + 10 < this.storyService.stories.length;

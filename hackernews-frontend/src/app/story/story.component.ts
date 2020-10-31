@@ -7,6 +7,7 @@ import { Story } from './story.interface';
   styleUrls: ['./story.component.scss']
 })
 export class StoryComponent {
+  /* Allows data to be input into the child component from the parent component */
   @Input() story: Story;
 
   constructor() { }
@@ -14,7 +15,7 @@ export class StoryComponent {
   /**
    * Converts Unix Time into a readable format based
    * on the time the story was submitted in relation to
-   * the current time (Credit: https://stackoverflow.com/a/47253415)
+   * the current time. (Credit: https://stackoverflow.com/a/47253415)
    * 
    * @param unixTime Unix Time associated with a story
    * @returns A formatted approximate time of the story submittion based on the current time
@@ -50,7 +51,7 @@ export class StoryComponent {
       return "Just now";
     }
 
-    /* */
+    /* Passing the current unix time into  */
     var timeStamp = new Date(unixTime * 1000);
 
     return (formatTime(timeStamp));

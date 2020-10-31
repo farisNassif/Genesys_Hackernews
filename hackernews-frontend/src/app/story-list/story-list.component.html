@@ -1,8 +1,8 @@
-<div class="stories-list">
+<div class="stories-list" style="overflow-anchor: none">
     <ng-container *ngFor="let story of stories">
         <app-story [story]="story"></app-story>
     </ng-container>
-    <div class="load-more-container">
-        <button mat-raised-button color="warn">Load Additional Stories</button>
+    <div class="load-more-container" style="overflow-anchor: none">
+        <button mat-raised-button color="warn" (click)="loadStories()">Load Additional Stodries</button>
     </div>
 </div>

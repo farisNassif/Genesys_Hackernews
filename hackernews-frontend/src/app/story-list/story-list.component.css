@@ -22,3 +22,6 @@
 .mat-warn:hover{
     opacity: 0.7;
 }
+mat-progress-bar {
+    top: 64px;
+}
