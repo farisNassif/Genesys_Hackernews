@@ -1,3 +1,4 @@
+/* Story Defintion */
 export interface Story {
     title: string;
     url: string;

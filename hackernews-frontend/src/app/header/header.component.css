@@ -38,7 +38,11 @@ img {
     line-height: 24px;
     text-transform: uppercase;
     padding: 3px 16px;
-    opacity: 1;  
+    opacity: 1; 
+}
+
+.login-reg-buttons {
+    padding-right: 25px;
 }
 
 .sign-up{

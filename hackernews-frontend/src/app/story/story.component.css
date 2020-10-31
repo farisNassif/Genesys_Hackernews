@@ -1,6 +1,9 @@
 mat-card {
     margin: 0.5rem auto;
     max-width: 824px;
+    border: 1px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 1rem;
 }
 
 .title {
