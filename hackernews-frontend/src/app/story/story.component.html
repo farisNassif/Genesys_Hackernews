@@ -1,14 +1,17 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>{{ story?.title }}</mat-card-title>
+        <mat-card-title>
+            <span lass="title">{{ story?.title }}</span>
+        </mat-card-title>
 
         <mat-card-subtitle>
-            <span class="score">{{ story?.score }} Points</span> by
-             <span class="author">{{ story?.by }}</span>
+            <b>{{ story?.score }} Points</b> by
+            <span class="author">{{ story?.by }}</span>
+            <span class="comments">  {{ story?.descendants }} comments</span>
         </mat-card-subtitle>
         
         <mat-card-subtitle>
             <span class="url">[{{ story?.url }}]</span>
         </mat-card-subtitle>
     </mat-card-header>
-  </mat-card>
+  </mat-card>   
