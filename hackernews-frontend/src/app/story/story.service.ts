@@ -19,11 +19,11 @@ export class StoryService {
    * @returns promise which resolves when data is available
    */
   getStoriesByType(storyType: string) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       this.http.get(`${API_BASE_URL}${storyType}stories.json`).subscribe((stories: Array<number>) => {
         this.stories = stories;
         resolve(stories);
-      }, () => { reject(); });
+      });
     });
   }
 
