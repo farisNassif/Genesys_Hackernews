@@ -27,10 +27,11 @@ img {
 .login, .sign-up{    
     border: 1px solid;
     border-radius: 4px;
+
     box-sizing: border-box;
     text-align: center;
-
     text-decoration: none;
+    
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .5px;
@@ -58,4 +59,35 @@ img {
 
 .login:hover{
     opacity: 0.7;
+}
+
+/* Social Media Icons */
+
+.fa {
+    padding: 5px;
+    font-size: 15px;	
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 2px;
+}
+  
+/* Hover feature on social media icons */
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: rgb(17, 95, 241);
+    color: white;
+}
+
+.fa-instagram {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
 }

@@ -51,7 +51,7 @@ export class StoryComponent {
       return "Just now";
     }
 
-    /* Passing the current unix time into  */
+    /* Passing the current unix time into the function */
     var timeStamp = new Date(unixTime * 1000);
 
     return (formatTime(timeStamp));

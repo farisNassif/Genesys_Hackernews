@@ -16,8 +16,6 @@ export class StoryListComponent implements OnInit {
   moreStories: boolean;
   /** Stores index of next story */
   nextStoryIndex = 0;
-  /** How long ago the story was posted */
-  postStamp: string;
 
   constructor(
     private storyService: StoryService,
@@ -47,7 +45,7 @@ export class StoryListComponent implements OnInit {
       forkJoin(storiesList).subscribe(
         (moreStories: Array<Story>) => {
           this.stories = [...this.stories, ...moreStories];
-          this.nextStoryIndex = this.nextStoryIndex + 10;
+          this.nextStoryIndex = this.nextStoryIndex + 1;
         }
       );
     }
