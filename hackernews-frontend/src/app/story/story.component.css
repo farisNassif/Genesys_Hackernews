@@ -7,12 +7,22 @@ mat-card {
     cursor: pointer;
 }
 
+.score { 
+    font-weight: bold;
+}
+
 .author {
     padding: 0.1rem 0.5rem;
     border-radius: 1rem;
     background-color: #e0e0e0;
     color:rgba(0,0,0,.87);
     font-weight: 500;
+}
+
+.comments {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .url {

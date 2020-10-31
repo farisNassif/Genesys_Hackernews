@@ -16,6 +16,8 @@ export class StoryListComponent implements OnInit {
   moreStories: boolean;
   /** Stores index of next story */
   nextStoryIndex = 0;
+  /** How long ago the story was posted */
+  postStamp: string;
 
   constructor(
     private storyService: StoryService,
@@ -27,11 +29,13 @@ export class StoryListComponent implements OnInit {
       const storyType: string = params.get('type');
       this.storyService.getStoriesByType(storyType).then(() => {
         this.stories = [];
-        this.nextStoryIndex = 1;
+        this.nextStoryIndex = 0;
         this.loadStories();
       });
     });
   }
+
+
   loadStories() {
     const storiesList = [];
     this.moreStories = this.nextStoryIndex + 10 < this.storyService.stories.length;
@@ -49,5 +53,4 @@ export class StoryListComponent implements OnInit {
       );
     }
   }
-
 }

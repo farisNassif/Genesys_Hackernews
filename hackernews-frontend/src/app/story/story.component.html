@@ -1,17 +1,19 @@
 <mat-card>
     <mat-card-header>
         <mat-card-title>
-            <span lass="title">{{ story?.title }}</span>
+            <span class="title">{{ story?.title }}</span>
         </mat-card-title>
 
         <mat-card-subtitle>
-            <b>{{ story?.score }} Points</b> by
-            <span class="author">{{ story?.by }}</span>
-            <span class="comments">  {{ story?.descendants }} comments</span>
+            <span class="score">{{ story?.score }} Points</span>
+            Submitted
+            <span class="time"> {{ getTimeAgo(story?.time) }}</span>
+            <span class="author">{{ story?.by }}</span> &nbsp;
+            <span class="comments">{{ story?.descendants }} comments</span>
         </mat-card-subtitle>
         
         <mat-card-subtitle>
-            <span class="url">[{{ story?.url }}]</span>
+            <span class="url">{{ story?.url }}</span>
         </mat-card-subtitle>
     </mat-card-header>
-  </mat-card>   
+</mat-card>   
