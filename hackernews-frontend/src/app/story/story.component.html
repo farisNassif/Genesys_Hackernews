@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-header>
         <mat-card-title>
-            <span class="title">{{ story?.title }}</span>
+            <span class="title" (click)="openLink(story?.url)">{{ story?.title }}</span>
         </mat-card-title>
 
         <mat-card-subtitle>
@@ -13,7 +13,7 @@
         </mat-card-subtitle>
         
         <mat-card-subtitle>
-            <span class="url">{{ story?.url }}</span>
+            <span class="url" (click)="openLink(story?.url)">{{ story?.url }}</span>
         </mat-card-subtitle>
     </mat-card-header>
 </mat-card>   

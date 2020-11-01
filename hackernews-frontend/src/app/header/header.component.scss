@@ -10,12 +10,6 @@ a {
     }
 }
 
-a:hover {
-    text-decoration: none;
-    color: #ffffff;
-    background: #f37500;
-}
-
 img {
     border-radius: 50%;
 }
@@ -37,6 +31,12 @@ img {
 .nav-buttons{        
     padding-left: 100px; 
     color: white;
+}
+
+.header-nav:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: #f37500;
 }
 
 .logo{

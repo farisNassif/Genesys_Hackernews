@@ -56,4 +56,8 @@ export class StoryComponent {
 
     return (formatTime(timeStamp));
   }
+
+  openLink(url: string) {
+    window.open(url);
+  }
 }

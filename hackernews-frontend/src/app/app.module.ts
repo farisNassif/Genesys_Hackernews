@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatToolbarModule,
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
