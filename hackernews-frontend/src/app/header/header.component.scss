@@ -2,6 +2,20 @@ header{
     border-radius: 1px solid;
 }
 
+a {
+    &.active {
+        background: #f37500;
+        border: 1px solid;
+        border-radius: 4px;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: #f37500;
+}
+
 img {
     border-radius: 50%;
 }
@@ -20,14 +34,6 @@ img {
     width: 50px;    
 }
 
-a {
-    &.active {
-        background: #f37500;
-        border: 1px solid;
-        border-radius: 4px;
-    }
-}
-
 .nav-buttons{        
     padding-left: 100px; 
     color: white;
@@ -37,14 +43,14 @@ a {
     text-decoration: none;
 }
 
+/* Login/Sign-up Buttons */
+
 .login, .sign-up{    
     border: 1px solid;
     border-radius: 4px;
-
     box-sizing: border-box;
     text-align: center;
     text-decoration: none;
-    
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .5px;
