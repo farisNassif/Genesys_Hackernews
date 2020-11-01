@@ -20,6 +20,19 @@ img {
     width: 50px;    
 }
 
+a {
+    &.active {
+        background: #f37500;
+        border: 1px solid;
+        border-radius: 4px;
+    }
+}
+
+.nav-buttons{        
+    padding-left: 100px; 
+    color: white;
+}
+
 .logo{
     text-decoration: none;
 }

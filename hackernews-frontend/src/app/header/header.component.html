@@ -3,10 +3,18 @@
         <div class="flex-grow-1">
             <a aria-label="Home" class="logo" routerLink="/">
                 <img src="../../assets/favicon.png" viewBox="0 0 20 20" class="hackernews-icon-svg">
-                <span class="hackernews-text">
+                <span class="hackernews-text"> 
                     Hacker News 
                 </span>
             </a>
+
+            <span class="nav-buttons">            
+                <a routerLink="stories/best" routerLinkActive="active" mat-button>Best</a>
+                |
+                <a routerLink="stories/top" routerLinkActive="active" mat-button>Top</a>
+                |
+                <a routerLink="stories/new" routerLinkActive="active" mat-button>New</a>
+            </span>
         </div>
 
         <div class="login-reg-buttons">                
