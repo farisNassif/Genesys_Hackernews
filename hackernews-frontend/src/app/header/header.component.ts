@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from "@angular/material/snack-bar";
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -14,13 +13,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /* Login placeholder, just flashing a snackbar currently */
+  /* Login placeholder, just flashing a snackbar */
   login() {
     this.openSnackBar("Login Placeholder", "Ok")
     
   }
 
-  /* Registration placeholder, just flashing a snackbar currently */
+  /* Registration placeholder, just flashing a snackbar */
   register() {
     this.openSnackBar("Register Placeholder", "Ok")
   }

@@ -48,7 +48,7 @@ export class StoryListComponent implements OnInit {
         (moreStories: Array<Story>) => {
           /* Spread operator used to merge current stories with more stories when loaded */
           this.stories = [...this.stories, ...moreStories];
-          this.nextStoryIndex = this.nextStoryIndex + 1;
+          this.nextStoryIndex = this.nextStoryIndex + 10;
         }
       );
     }
