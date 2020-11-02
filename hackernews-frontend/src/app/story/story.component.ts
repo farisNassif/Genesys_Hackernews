@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Story } from './story.interface';
+import { COMMENTS_BASE_URL } from '../app.constants';
 
 @Component({
   selector: 'app-story',
@@ -57,6 +58,12 @@ export class StoryComponent {
     return (formatTime(timeStamp));
   }
 
+  /* Opens the official comments page for a story */
+  openComments(storyId: number) {
+    window.open(COMMENTS_BASE_URL + storyId);
+  }
+
+  /* Opens the story link for the user */
   openLink(url: string) {
     window.open(url);
   }

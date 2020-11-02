@@ -9,7 +9,7 @@
             <span class="time"> {{ getTimeAgo(story?.time) }}</span>
             
             <span class="author">{{ story?.by }}</span> &nbsp;
-            <span class="comments">{{ story?.descendants }} comments</span>
+            <span class="comments" (click)="openComments(story?.id)">{{ story?.descendants }} comments</span>
         </mat-card-subtitle>
         
         <mat-card-subtitle>
