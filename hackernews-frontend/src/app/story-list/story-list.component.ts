@@ -28,8 +28,10 @@ export class StoryListComponent implements OnInit {
       const storyType: string = params.get('type');
       /* Call the Story service function, passing it the story type */
       this.storyService.getStoriesByType(storyType).then(() => {
+        /* Initialize stores and nextStoryIndex */
         this.stories = [];
         this.nextStoryIndex = 0;
+        /* Populate stores with the first (n) stories and update next story index to (..n + 1) */
         this.loadStories();
       });
     });
@@ -37,12 +39,12 @@ export class StoryListComponent implements OnInit {
 
   loadStories() {
     const storiesList = [];
-    this.moreStories = this.nextStoryIndex + 10 < this.storyService.stories.length;
+    this.moreStories = (this.nextStoryIndex + 10) < this.storyService.stories.length;
     if (this.moreStories) {
+      /* Load 10 more stories, for each loaded story ... */
       for (let i = this.nextStoryIndex; i < this.nextStoryIndex + 10; i++) {
-        storiesList.push(
-          this.storyService.getStory(this.storyService.stories[i])
-        );
+        /* ... append(push) it to the story list */
+        storiesList.push(this.storyService.getStory(this.storyService.stories[i]));
       }
       forkJoin(storiesList).subscribe(
         (moreStories: Array<Story>) => {
