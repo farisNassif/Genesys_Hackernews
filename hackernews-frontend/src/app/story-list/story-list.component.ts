@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { StoryService } from '../story/story.service';
+import { StoryService } from '../story/service/story.service';
 import { ActivatedRoute } from '@angular/router';
-import { Story } from '../story/story.interface';
+import { Story } from '../story/interface/story.interface';
 import { forkJoin } from 'rxjs';
 
 @Component({
@@ -46,9 +46,10 @@ export class StoryListComponent implements OnInit {
         /* ... append(push) it to the story list */
         storiesList.push(this.storyService.getStory(this.storyService.stories[i]));
       }
+      /* */
       forkJoin(storiesList).subscribe(
         (moreStories: Array<Story>) => {
-          /* Spread operator used to merge current stories with more stories when loaded */
+          /* Spread operator used to merge current stories with more stories when invoked */
           this.stories = [...this.stories, ...moreStories];
           this.nextStoryIndex = this.nextStoryIndex + 10;
         }

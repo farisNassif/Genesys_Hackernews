@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Story } from './story.interface';
+import { Story } from './interface/story.interface';
 import { COMMENTS_BASE_URL } from '../app.constants';
 
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',
-  styleUrls: ['./story.component.scss']
+  styleUrls: ['./story.component.css']
 })
 export class StoryComponent {
   /* Allows data to be input into the child component from the parent component */
