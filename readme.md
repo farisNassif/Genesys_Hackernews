@@ -12,7 +12,7 @@ Clone this repo and run `npm install` to install all the dependencies.
 
 Once the dependencies are installed, you can run `npm start` to start the application.
 
-App will be live at localhost:4200
+App will be live at localhost:4200 <i>(Or alteratively [Here](https://frontend-hackernews.herokuapp.com/stories/top))</i>
 
 ### Testing
 Clone this repo and run `ng test` to run the unit tests.
