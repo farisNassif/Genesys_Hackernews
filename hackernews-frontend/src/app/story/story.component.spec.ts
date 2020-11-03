@@ -45,9 +45,9 @@ describe('StoryComponent', () => {
   /* Test unix time conversion */
   it('should correctly convert unixtime to a readable format', () => {
     expect(component.getTimeAgo(123)).toEqual("618 months ago by ");
-    /* I would test more, but since it's time based the test would
-      fail if ran in the future, since a unixtime representing 10
-      seconds ago right now could equal to potentially 'weeks ago' 
+    /* I would unit test this more, but since it's time based the 
+      test would fail if ran in the future, since a unixtime representing 
+      10 seconds ago right now could equal to potentially 'weeks ago' 
       at some point in the future
     */
   });

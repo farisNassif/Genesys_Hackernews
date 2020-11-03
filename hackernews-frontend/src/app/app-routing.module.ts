@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'stories/:type', component: StoryListComponent },
   /* Default route */
   { path: '', pathMatch: 'full', redirectTo: DEFAULT_ENDPOINT},
-  /* Not found path */
+  /* Path not found */
   { path: '**', redirectTo: DEFAULT_ENDPOINT }
 ];
 

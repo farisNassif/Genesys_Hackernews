@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   /* Login placeholder, just flashing a snackbar */
   login() {
     this.openSnackBar("Login Placeholder", "Ok")
-    
   }
 
   /* Registration placeholder, just flashing a snackbar */

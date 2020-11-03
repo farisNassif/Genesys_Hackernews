@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StoryService } from '../story/service/story.service';
 import { ActivatedRoute } from '@angular/router';
 import { Story } from '../story/interface/story.interface';
-import { forkJoin } from 'rxjs';
+import { forkJoin, combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-story-list',
@@ -46,7 +46,7 @@ export class StoryListComponent implements OnInit {
         /* ... append(push) it to the story list */
         storiesList.push(this.storyService.getStory(this.storyService.stories[i]));
       }
-      /* */
+      /* Forkjoin(Previously combineLatest) with a single input array */
       forkJoin(storiesList).subscribe(
         (moreStories: Array<Story>) => {
           /* Spread operator used to merge current stories with more stories when invoked */
